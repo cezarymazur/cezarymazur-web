@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* Darkmode / Lightmode Colors */
+	:root {
+		--black: 225 225 225;
+		--gray: 100 100 100;
+		--white: 40 40 40;
+		--secondary: 225 225 225;
+	}
+	:root[class~='dark'] {
+		--black: 40 40 40;
+		--gray: 200 200 200;
+		--white: 225 225 225;
+		--secondary: 8 47 73;
+	}
+	@font-face {
+		font-family: 'Metana_outline';
+		src: url('../../fonts/neuemetananextoutline-black-webfont.woff2') format('woff2'),
+			url('../../fonts/neuemetananextoutline-black-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Metana';
+		src: url('../../fonts/neuemetananext-semibold-webfont.woff2') format('woff2'),
+			url('../../fonts/neuemetananext-semibold-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Neue';
+		src: url('../../fonts/ttfirsneue-regular-webfont.woff2') format('woff2'),
+			url('../../fonts/ttfirsneue-regular-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	html {
+		@apply font-grotesk antialiased scroll-smooth md:px-0 overflow-x-hidden leading-tight;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-metana antialiased;
+	}
+	h1 {
+		@apply text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl font-thin;
+		span {
+			@apply font-metanaOutline text-primary tracking-wider antialiased;
+		}
+	}
+	h2 {
+		@apply text-3xl xl:text-5xl 2xl:text-6xl;
+	}
+	h3 {
+		@apply text-2xl xl:text-4xl 2xl:text-5xl;
+	}
+	h4,
+	h5,
+	h6 {
+		@apply text-xl xl:text-2xl 2xl:text-3xl;
+	}
+	p {
+		@apply text-base;
+		a {
+			@apply bg-primary bg-opacity-10 hover:bg-opacity-20 transition-all duration-300;
+		}
+	}
+	u {
+		@apply bg-primary bg-opacity-10 decoration-transparent;
+	}
+}
+
+body {
+	@apply bg-secondary text-white text-xs 2xl:text-base;
+
+	li {
+		a {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background-color: #4bb7c0;
+				bottom: 2px;
+				right: 0;
+				transform-origin: left;
+				transform: scaleX(0);
+				transition: transform 0.5s ease-in-out;
+				z-index: -1;
+			}
+
+			&:hover {
+				&::before {
+					transform-origin: right;
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
