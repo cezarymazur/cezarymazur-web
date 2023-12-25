@@ -19,7 +19,9 @@
 			<h2 class="relative -mt-5 uppercase z-10 pb-4">* contact</h2>
 			<div class="my-5 grid md:grid-cols-2 gap-5 xl:gap-16 xl:my-16">
 				<div v-for="link in links" class="my-3">
-					<h3 class="font-grotesk text-white opacity-40 text-xl">{{ link.label }}</h3>
+					<div>
+						<h3 class="font-grotesk text-white opacity-40 text-xl inline-block">{{ link.label }}</h3>
+					</div>
 					<NuxtLink
 						:to="link.url"
 						:target="link.target"

@@ -18,7 +18,7 @@
 			</div>
 			<h2 class="relative -mt-5 uppercase z-10 pb-4">* about</h2>
 			<div class="my-5 pb-4">
-				<h3 class="text-base mb-5 xl:text-lg">summary</h3>
+				<h3 class="text-base mb-5 xl:text-lg inline-block">summary</h3>
 				<p>
 					&#128075; Hi there! I'm a Frontend Developer with over +8 years of hands-on experience, currently enhancing
 					digital solutions at
@@ -58,15 +58,17 @@
 					</div>
 				</div>
 				<div class="flex flex-col justify-start my-5 border-white border border-opacity-20 rounded-xl p-4">
-					<h4 class="text-base xl:text-lg mb-5">&#128142; Most important skills:</h4>
-					<ul class="text-base flex flex-wrap gap-x-5 gap-y-2 xl:text-lg">
-						<li
+					<div>
+						<h4 class="text-base xl:text-lg mb-5 inline-block">&#128142; Most important skills:</h4>
+					</div>
+					<div class="text-base flex flex-wrap gap-x-5 gap-y-2 xl:text-lg">
+						<div
 							v-for="skill in skills"
 							class="relative after:content-[''] last-of-type:after:hidden after:block after:w-1 after:h-1 after:rounded-full after:bg-white after:absolute after:-right-3 after:top-1/2 after:-translate-y-1/2"
 						>
 							{{ skill }}
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 			<Reviews />

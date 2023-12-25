@@ -8,7 +8,7 @@
 				</div>
 			</div>
 			<h2 class="relative -mt-5 uppercase z-10 pb-4">* blog</h2>
-			<h3 class="text-base my-5 xl:text-lg">recent posts</h3>
+			<h3 class="text-base my-5 xl:text-lg inline-block">recent posts</h3>
 			<div class="relative my-5 grid lg:grid-cols-2 2xl:grid-cols-3 gap-5">
 				<SingleArticle v-for="article in articles" :data="article" />
 			</div>

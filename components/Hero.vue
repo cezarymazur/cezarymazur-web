@@ -153,7 +153,7 @@
 				</div>
 			</div>
 			<NuxtPicture
-				class="block absolute -left-72 md:-left-96 bottom-0 z-0 2xl:-left-80"
+				class="block absolute -left-72 md:-left-96 bottom-0 -z-50 2xl:-left-80"
 				format="webp"
 				src="shadow.png"
 				:imgAttrs="{ class: 'w-[420px] md:w-[600px]' }"
