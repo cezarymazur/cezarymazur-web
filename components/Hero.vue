@@ -63,6 +63,13 @@
 					<div
 						class="hs-tooltip [--placement:bottom] 2xl:[--placement:right] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
 					>
+						<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" v-if="loadingIcon">
+							<div
+								class="animate-spin w-4 h-4 md:w-6 md:h-6 xl:w-4 xl:h-4 2xl:w-6 2xl:h-6 border-[3px] border-current border-t-transparent text-primary rounded-full"
+								role="status"
+								aria-label="loading"
+							></div>
+						</div>
 						<button type="button" class="hs-tooltip-toggle">
 							<div
 								:onClick="fetchAnotherEmoji"
@@ -170,11 +177,14 @@ const endpoint = 'https://emojihub.yurace.pro/api/random'
 
 const emoji = ref('&#128187;')
 const timeout = ref()
+let loadingIcon = ref(false)
 
 async function getRandomEmoji() {
+	loadingIcon.value = true
 	const response = await fetch(endpoint)
 	const emojiHtml = await response.json()
 	emoji.value = emojiHtml.htmlCode[0]
+	loadingIcon.value = false
 }
 
 function fetchAnotherEmoji() {
