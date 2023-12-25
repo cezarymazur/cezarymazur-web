@@ -1,18 +1,21 @@
 <template>
 	<NuxtLink :to="caseStudy.link" target="_blank" class="relative rounded-xl overflow-hidden group">
 		<NuxtPicture
-			:imgAttrs="{ class: 'transition-all w-full duration-500 group-hover:scale-[1.05]' }"
+			width="1024"
+			height="768"
+			:imgAttrs="{ class: 'transition-all w-full duration-500 xl:group-hover:scale-[1.05]' }"
 			sizes="sm:400px md:600px"
-			format="jpg"
+			format="webp"
 			quality="75"
 			:src="caseStudy.img"
+			alt="Case Study Main Picture - Visualization of the realization"
 		/>
 		<div
 			class="relative xl:absolute transition-opacity duration-500 xl:opacity-0 group-hover:opacity-100 bottom-0 right-0 left-0 text-white bg-black xl:bg-secondary p-4 xl:p-6 bg-opacity-40 xl:bg-opacity-90 flex flex-col gap-5 border rounded-b-xl xl:border-t-0"
-			:class="`border-[${caseStudy.color}]`"
+			:class="getTagColor(caseStudy.name, tagColors)"
 		>
 			<div>
-				<div class="font-metana text-xl 2xl:text-2xl" :class="`text-${caseStudy.color}`">{{ caseStudy.title }}</div>
+				<h3 class="font-metana text-xl 2xl:text-2xl" :class="`text-${caseStudy.color}`">{{ caseStudy.title }}</h3>
 				<div class="opacity-60">Created in {{ caseStudy.date }}</div>
 			</div>
 			<div class="flex gap-3 flex-wrap">

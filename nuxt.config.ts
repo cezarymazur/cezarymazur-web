@@ -36,7 +36,6 @@ export default defineNuxtConfig({
 		trackOnNextTick: false,
 		devtools: true,
 	},
-	darkMode: 'media',
 	app: {
 		head: {
 			title: 'Frontend Developer | WordPress and Vue3 Specialist | Cezary Mazur',
@@ -48,13 +47,11 @@ export default defineNuxtConfig({
 				},
 			],
 			script: [{ type: 'text/javascript', src: 'js/window.curDot.js', body: true }],
-			link: [
-				{
-					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-				},
-				{ rel: 'icon', type: 'image/x-icon', href: 'favicon.png' },
-			],
+			link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.png' }],
+			htmlAttrs: {
+				lang: 'en',
+				class: 'dark',
+			},
 		},
 	},
 })

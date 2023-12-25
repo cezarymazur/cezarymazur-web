@@ -69,7 +69,7 @@
 	p {
 		@apply text-base;
 		a {
-			@apply bg-primary bg-opacity-10 hover:bg-opacity-20 transition-all duration-300;
+			@apply bg-primary bg-opacity-10 hover:bg-opacity-20 transition-all duration-300 underline underline-offset-4 decoration-primary;
 		}
 	}
 	u {

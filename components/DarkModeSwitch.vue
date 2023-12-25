@@ -4,6 +4,7 @@
 			<button
 				type="button"
 				class="hs-dropdown-toggle hs-dark-mode group flex items-center text-white hover:text-primary font-medium text-sm group"
+				aria-label="Darkmode"
 			>
 				<span
 					data-lightmode-switch-label

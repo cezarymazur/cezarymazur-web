@@ -1,11 +1,25 @@
 <template>
 	<NuxtLink :to="data.url" target="_blank" class="group hover:-translate-y-1 transition-transform duration-300">
 		<article>
-			<NuxtPicture :imgAttrs="{ class: 'rounded-t-xl w-full' }" :src="data.cover_image" />
+			<NuxtPicture
+				:imgAttrs="{ class: 'rounded-t-xl w-full' }"
+				:src="data.cover_image"
+				format="webp"
+				width="1000"
+				height="420"
+				:alt="data.title"
+			/>
 			<div class="rounded-b-xl bg-black bg-opacity-40 p-4 xl:p-6 border border-white border-t-0 border-opacity-20">
 				<div class="flex justify-between items-center gap-3">
 					<div class="flex flex-row items-center flex-nowrap">
-						<NuxtPicture :imgAttrs="{ class: 'w-[60px] min-w-[40px]' }" :src="data.user.profile_image_90" />
+						<NuxtPicture
+							width="60"
+							height="60"
+							:imgAttrs="{ class: 'w-[60px] min-w-[40px]' }"
+							:src="data.user.profile_image_90"
+							format="webp"
+							alt="Article Author Avatar"
+						/>
 						<div class="ml-2">
 							<div class="font-metana text-sm sm:text-base whitespace-nowrap">{{ data.user.name }}</div>
 							<div class="opacity-60">Posted on {{ data.readable_publish_date }}</div>

@@ -2,11 +2,12 @@
 	<div id="about" class="w-full h-full pt-12 relative px-4 md:px-10 overflow-x-hidden overflow-y-auto lg:pb-6">
 		<NuxtPicture
 			class="absolute -right-60 -top-10 z-0"
-			format="png"
+			format="webp"
 			src="shadow.png"
 			:imgAttrs="{ class: 'w-[350px] 2xl:w-[600px]' }"
 			sizes="sm:200px md:450px"
 			quality="100"
+			alt="Frontend Decoration - gradient from blue to purple blurred shadow"
 		/>
 		<div class="relative z-10">
 			<div class="w-screen mt-12 -ml-10 -mr-10 opacity-10">
@@ -35,7 +36,7 @@
 					>
 						<button
 							class="hs-accordion-toggle hs-accordion-active:text-primary py-3 inline-flex items-center gap-x-3 text-sm xl:text-base font-metana w-full justify-between text-start text-white hover:text-gray-500 border-b hs-accordion-active:border-primary"
-							aria-controls="hs-basic-collapse-one"
+							aria-controls="hs-basic-always-open-collapse-one"
 						>
 							<div><span v-html="accordion.emoji"></span>{{ accordion.label }}</div>
 							<Chevron

@@ -2,11 +2,12 @@
 	<div id="work" class="w-full h-auto relative px-4 md:px-10 pt-12 overflow-x-hidden overflow-y-auto">
 		<NuxtPicture
 			class="hidden lg:hidden absolute -left-36 top-0 z-0"
-			format="png"
+			format="webp"
 			src="shadow.png"
 			:imgAttrs="{ class: 'w-[420px] md:w-[600px]' }"
 			sizes="sm:200px md:450px"
 			quality="100"
+			alt="Frontend Decoration - gradient from blue to purple blurred shadow"
 		/>
 		<div class="w-screen mt-12 -ml-10 -mr-10 opacity-10">
 			<div data-marquee class="flex">

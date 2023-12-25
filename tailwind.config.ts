@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const srcDir = '.'
 const config: Config = {
-	darkMode: 'media',
+	darkMode: 'class',
 	content: [
 		`${srcDir}/components/**/*.{vue,js,ts}`,
 		`${srcDir}/layouts/**/*.vue`,

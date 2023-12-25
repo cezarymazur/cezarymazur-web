@@ -2,21 +2,23 @@
 	<div id="home" class="w-full xl:h-screen relative overflow-x-hidden px-4 md:px-10">
 		<NuxtPicture
 			class="absolute -right-36 -top-48 md:-right-42 md:-top-42"
-			format="png"
+			format="webp"
 			src="shadow.png"
 			:imgAttrs="{
 				class: 'w-[350px] md:w-[450px] 2xl:w-[600px]',
 			}"
 			sizes="sm:200px md:450px"
 			quality="100"
+			alt="Frontend Decoration - gradient from blue to purple blurred shadow"
 		/>
 		<NuxtPicture
 			class="absolute right-0 top-0 md:right-6 md:top-6 2xl:top-20 2xl:right-20"
-			format="png"
+			format="webp"
 			src="face.png"
 			:imgAttrs="{ class: 'w-[125px] md:w-[200px] xl:w-[250px] 2xl:w-[300px]' }"
 			sizes="sm:200px xl:300px"
 			quality="80"
+			alt="Frontend Decoration - website page author memoji"
 		/>
 		<div
 			class="md:h-auto xl:h-screen w-full flex flex-row flex-wrap justify-start md:items-center md:content-around pt-20 xl:pt-0"
@@ -78,22 +80,22 @@
 					</div>
 
 					<div class="text-center p-4 2xl:p-16 pr-2 2xl:pr-6 border-b border-white mr-4 2xl:mr-10 border-opacity-20">
-						<h3>8+</h3>
+						<h2 class="text-2xl xl:text-4xl 2xl:text-5xl">8+</h2>
 						<p>
 							years of<br />
 							<u>experience</u>
 						</p>
 					</div>
 					<div class="text-center p-4 2xl:p-16 pb-2 2xl:pb-6 border-l border-white mb-4 2xl:mb-10 border-opacity-20">
-						<h3>34+</h3>
+						<h2 class="text-2xl xl:text-4xl 2xl:text-5xl">34+</h2>
 						<p><u>success</u> <br />stories</p>
 					</div>
 					<div class="text-center p-4 2xl:p-16 pt-0 2xl:pt-6 border-r border-white mt-4 2xl:mt-10 border-opacity-20">
-						<h3>10k+</h3>
+						<h2 class="text-2xl xl:text-4xl 2xl:text-5xl">10k+</h2>
 						<p>lines <br />of <u>code</u></p>
 					</div>
 					<div class="text-center p-4 2xl:p-16 pl-2 2xl:pl-6 border-t border-white ml-4 2xl:ml-10 border-opacity-20">
-						<h3>13+</h3>
+						<h2 class="text-2xl xl:text-4xl 2xl:text-5xl">13+</h2>
 						<p>different <br /><u>technologies</u></p>
 					</div>
 				</div>
@@ -105,32 +107,36 @@
 					<div
 						class="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-6 md:gap-x-10 2xl:justify-evenly 2xl:mr-20 2xl:ml-20 items-center"
 					>
-						<NuxtLink to="https://systemypneumatyczne.pl/" target="_blank">
+						<NuxtLink
+							to="https://systemypneumatyczne.pl/"
+							target="_blank"
+							aria-label="See the SystemyPneumatyczne website live"
+						>
 							<SystemyLogo
 								class="w-auto h-10 lg:h-16 fill-white opacity-30 lg:opacity-10 hover:opacity-100 transition-opacity duration-500"
 								:fontControlled="false"
 							/>
 						</NuxtLink>
-						<NuxtLink to="https://panoptyk.pl/" target="_blank">
+						<NuxtLink to="https://panoptyk.pl/" target="_blank" aria-label="See the PanOptyk.pl ecommerce live">
 							<PanoLogo
 								class="w-auto h-6 lg:h-8 fill-white opacity-30 lg:opacity-10 hover:opacity-100 transition-opacity duration-500"
 								:fontControlled="false"
 							/>
 						</NuxtLink>
-						<NuxtLink to="https://makro-bud.pl/" target="_blank">
+						<NuxtLink to="https://makro-bud.pl/" target="_blank" aria-label="See the Makro-bud website live">
 							<MakroLogo
 								class="w-auto h-4 lg:h-6 fill-white opacity-30 lg:opacity-10 hover:opacity-100 transition-opacity duration-500"
 								:fontControlled="false"
 							/>
 						</NuxtLink>
 
-						<NuxtLink to="#">
+						<NuxtLink to="#" target="_blank" aria-label="See the MoySoy ecommerce live">
 							<MoysoyLogo
 								class="w-auto h-4 lg:h-6 fill-white opacity-30 lg:opacity-10 hover:opacity-100 transition-opacity duration-500"
 								:fontControlled="false"
 							/>
 						</NuxtLink>
-						<NuxtLink to="https://dermis-kosmetologia.pl/" target="_blank">
+						<NuxtLink to="https://dermis-kosmetologia.pl/" target="_blank" aria-label="See the Makro-bud website live">
 							<DermisLogo
 								class="w-auto h-6 lg:h-10 fill-white opacity-30 lg:opacity-10 hover:opacity-100 transition-opacity duration-500"
 								:fontControlled="false"
@@ -141,11 +147,12 @@
 			</div>
 			<NuxtPicture
 				class="block absolute -left-72 md:-left-96 bottom-0 z-0 2xl:-left-80"
-				format="png"
+				format="webp"
 				src="shadow.png"
 				:imgAttrs="{ class: 'w-[420px] md:w-[600px]' }"
 				sizes="sm:200px md:450px"
 				quality="100"
+				alt="Frontend Decoration - gradient from blue to purple blurred shadow"
 			/>
 		</div>
 	</div>

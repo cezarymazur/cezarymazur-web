@@ -2,11 +2,12 @@
 	<div id="contact" class="w-full h-full relative px-4 md:px-10 pt-12 overflow-x-hidden overflow-y-auto lg:-mt-[125px]">
 		<NuxtPicture
 			class="absolute -right-52 z-0 bottom-0"
-			format="png"
+			format="webp"
 			src="shadow-2.png"
 			:imgAttrs="{ class: 'w-[350px] lg:w-[350px] 2xl:w-[600px]' }"
 			sizes="sm:200px md:450px"
 			quality="100"
+			alt="Frontend Decoration - gradient from blue to purple blurred shadow"
 		/>
 		<div class="relative z-10 lg:mt-[200px]">
 			<div class="w-screen mt-12 -ml-10 -mr-10 opacity-10">
@@ -22,6 +23,7 @@
 					<NuxtLink
 						:to="link.url"
 						:target="link.target"
+						format="webp"
 						class="text-3xl font-metana text-primary hover:underline xl:text-5xl"
 						>{{ link.cta }}</NuxtLink
 					>
@@ -32,7 +34,7 @@
 					v-for="media in socialMedia"
 					class="text-4xl hover:text-primary transition-colors duration-500 xl:text-5xl"
 				>
-					<NuxtLink :to="media.link" :target="media.target">
+					<NuxtLink :to="media.link" :target="media.target" aria-label="Read more in the Social Media!">
 						<linkedin v-if="media.label === 'linkedin'" />
 						<github v-else-if="media.label === 'github'" />
 						<behance v-else-if="media.label === 'behance'" />

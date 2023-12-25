@@ -17,7 +17,8 @@
 								<NuxtPicture
 									:imgAttrs="{ class: 'h-10 w-10 rounded-full' }"
 									:src="item.img"
-									alt="Image Description"
+									alt="Review Person Avatar"
+									format="webp"
 									sizes="sm:50px"
 									quality="100"
 								></NuxtPicture>

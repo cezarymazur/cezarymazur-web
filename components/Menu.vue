@@ -4,12 +4,15 @@
 			<button
 				type="button"
 				class="hs-dropdown-toggle p-2 rounded-tl-xl w-[50px] h-[50px] 2xl:w-[65px] 2xl:h-[65px] innline-flex justify-center items-center gap-x-2 bg-white text-secondary shadow-sm hover:bg-gray-50 -mr-1"
+				aria-label="Menu"
 			>
 				<div class="menu-icon relative w-full h-full 2xl:w-[50px] 2xl:h-[50px] cursor-pointer">
 					<input
 						class="menu-icon__cheeckbox block w-full h-full cursor-pointer z-20 absolute opacity-0"
 						type="checkbox"
+						id="menu"
 					/>
+					<label for="menu" class="opacity-0"></label>
 					<div class="m-auto absolute top-0 bottom-0 right-0 left-0 h-[16px]">
 						<span
 							class="absolute block w-full h-[3px] rounded-sm bg-black transition-[all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965)] duration-300 top-0 hs-dropdown-open:rotate-45 hs-dropdown-open:top-[6px] 2xl:hs-dropdown-open:w-[50px]"
