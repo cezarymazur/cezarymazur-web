@@ -40,6 +40,20 @@ export default defineNuxtConfig({
 		head: {
 			title: 'Frontend Developer | WordPress and Vue3 Specialist | Cezary Mazur',
 			meta: [
+				{ hid: 'og-type', property: 'og:type', content: 'website' },
+				{
+					hid: 'og-title',
+					property: 'og:title',
+					content: 'Frontend Developer | WordPress and Vue3 Specialist | Cezary Mazur',
+				},
+				{
+					hid: 'og-desc',
+					property: 'og:description',
+					content:
+						'Web Developer with WordPress and Vue3 skills. Experienced and passionate about responsive web design with a mobile-first approach - Cezary Mazur',
+				},
+				{ hid: 'og-image', property: 'og:image', content: 'face.png' },
+				{ hid: 'og-url', property: 'og:url', content: 'https://cezarymazur.pl/' },
 				{
 					name: 'description',
 					content:
@@ -47,7 +61,7 @@ export default defineNuxtConfig({
 				},
 			],
 			script: [{ type: 'text/javascript', src: 'js/window.curDot.js', body: true }],
-			link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.png' }],
+			link: [{ rel: 'icon', type: 'image/x-icon', href: 'face.png' }],
 			htmlAttrs: {
 				lang: 'en',
 				class: 'dark',
